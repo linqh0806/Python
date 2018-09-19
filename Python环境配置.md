@@ -134,6 +134,7 @@ onda create -n python3 python=3.5 numpy pandas
 **提示：默认情况下，新创建的环境将会被保存在/Users/<user_name>/anaconda3/env目录下，其中，<user_name>为当前用户的用户名。**
 
 2.切换环境
+
 ① Linux 或 macOS
 ```
 source activate <env_name>
