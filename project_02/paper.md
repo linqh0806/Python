@@ -32,9 +32,96 @@ urlopen()返回的对象，可以使用read()进行读取，同样也可以使�
 
 关于META标签和HTTP状态码的内容可以自行百度百科，里面有很详细的介绍。
 
-![](https://img-blog.csdn.net/20170301124848730?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYzQwNjQ5NTc2Mg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
-![](https://img-blog.csdn.net/20170301124908215?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYzQwNjQ5NTc2Mg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast")
+* META标签
+
+
+通常所说的META标签，是在HTML网页源代码中一个重要的html标签。META标签用来描述一个HTML网页文档的属性，例如作者、日期和时间、网页描述、关键词、页面刷新等。
+
+META标签是HTML标记HEAD区的一个关键标签，它位于HTML文档的head和title之间（有些也不是在head和title之间）。它提供的信息虽然用户不可见，但却是文档的最基本的元信息。<meta>除了提供文档字符集、使用语言、作者等基本信息外，还涉及对关键词和网页等级的设定。
+
+
+所以有关搜索引擎注册、搜索引擎优化排名等网络营销方法内容中，通常都要谈论META标签的作用，我们甚至可以说，META标签的内容设计对于搜索引擎营销来说是至关重要的一个因素，合理利用 Meta 标签的 Description 和Keywords 属性，加入网站的关键字或者网页的关键字，可使网站更加贴近用户体验。
+
+从HTML代码实例中可以看到，一段代码中有3个含有meta的地方，并且meta并不是独立存在的，而是要在后面连接其他的属性，如description、Keywords、http-equiv等。下面简单介绍一些搜索引擎营销中常见的META标签的组成及其作用。
+
+* HTTP状态码
+
+HTTP状态码（HTTP Status Code）是用以表示网页服务器HTTP响应状态的3位数字代码。它由 RFC 2616 规范定义的，并得到RFC 2518、RFC 2817、RFC 2295、RFC 2774、RFC 4918等规范扩展。
+
+中文名 HTTP状态码
+
+外文名 HTTP Status Code
+
+规范定义 RFC 2616
+
+消息端 1字头，2字头，3字头
+
+1 消息
+▪ 100 Continue
+▪ 101 Switching Protocols
+▪ 102 Processing
+
+2 成功
+▪ 200 OK
+▪ 201 Created
+▪ 202 Accepted
+▪ 203 Non-Authoritative Information
+▪ 204 No Content
+▪ 205 Reset Content
+▪ 206 Partial Content
+▪ 207 Multi-Status
+
+3 重定向
+▪ 300 Multiple Choices
+▪ 301 Moved Permanently
+▪ 302 Move temporarily
+▪ 303 See Other
+▪ 304 Not Modified
+▪ 305 Use Proxy
+▪ 306 Switch Proxy
+▪ 307 Temporary Redirect
+
+4 请求错误
+▪ 400 Bad Request
+▪ 401 Unauthorized
+▪ 402 Payment Required
+▪ 403 Forbidden
+▪ 404 Not Found
+▪ 405 Method Not Allowed
+▪ 406 Not Acceptable
+▪ 407 Proxy Authentication Required
+▪ 408 Request Timeout
+▪ 409 Conflict
+▪ 410 Gone
+▪ 411 Length Required
+▪ 412 Precondition Failed
+▪ 413 Request Entity Too Large
+▪ 414 Request-URI Too Long
+▪ 415 Unsupported Media Type
+▪ 416 Requested Range Not Satisfiable
+▪ 417 Expectation Failed
+▪ 421 too many connections
+▪ 422 Unprocessable Entity
+▪ 423 Locked
+▪ 424 Failed Dependency
+▪ 425 Unordered Collection
+▪ 426 Upgrade Required
+▪ 449 Retry With
+▪ 451Unavailable For Legal Reasons
+
+5 服务器错误
+▪ 500 Internal Server Error
+▪ 501 Not Implemented
+▪ 502 Bad Gateway
+▪ 503 Service Unavailable
+▪ 504 Gateway Timeout
+▪ 505 HTTP Version Not Supported
+▪ 506 Variant Also Negotiates
+▪ 507 Insufficient Storage
+▪ 509 Bandwidth Limit Exceeded
+▪ 510 Not Extended
+▪ 600 Unparseable Response Headers
 
 了解到这些，我们就可以进行新一轮的测试，新建文件名urllib_test04.py，编写如下代码：
 ```
@@ -89,31 +176,34 @@ data参数有自己的格式，它是一个基于application/x-www.form-urlencod
 
 向有道翻译发送data，得到翻译结果。
 
-1.打开有道翻译界面，如下图所示：
+1.打开有道翻译界面。
 
-![](https://img-blog.csdn.net/20170301125256905?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYzQwNjQ5NTc2Mg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+2.鼠标右键检查（F12），也就是审查元素。
 
-2.鼠标右键检查，也就是审查元素，如下图所示：
+3.选择右侧出现的Network。
 
-![](https://img-blog.csdn.net/20170301125418999?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYzQwNjQ5NTc2Mg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+4.在左侧输入翻译内容，输入Jack。
 
-3.选择右侧出现的Network，如下图所示：
+5.点击自动翻译按钮，我们就可以看到右侧出现的内容。
 
-![](https://img-blog.csdn.net/20170301125456156?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYzQwNjQ5NTc2Mg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+6.点击上图红框中的内容，查看它的信息，如下所示：
 
-4.在左侧输入翻译内容，输入Jack，如下图所示：
+```
+From Data
 
-![](https://img-blog.csdn.net/20170301125516531?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYzQwNjQ5NTc2Mg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast")
-
-5.点击自动翻译按钮，我们就可以看到右侧出现的内容，如下图所示：
-
-![](https://img-blog.csdn.net/20170301125528598?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYzQwNjQ5NTc2Mg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-
-6.点击上图红框中的内容，查看它的信息，如下图所示：
-
-![](https://img-blog.csdn.net/20170301125537583?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYzQwNjQ5NTc2Mg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-
-![](https://img-blog.csdn.net/20170301125558083?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYzQwNjQ5NTc2Mg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+i: Jack
+from: AUTO
+to: AUTO
+smartresult: dict
+client: fanyideskweb
+salt: 1537346833601
+sign: 52e8a1d10c63bfaa2ec7af03145bdb37
+doctype: json
+version: 2.1
+keyfrom: fanyi.web
+action: FY_BY_CLICKBUTTION
+typoResult: false
+```
 
 7.记住这些信息，这是我们一会儿写程序需要用到的。
 
