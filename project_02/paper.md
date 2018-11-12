@@ -1,3 +1,4 @@
+# 利用urllib.urlopen向有道翻译发送数据获得翻译结果
 
 # 学习网站,膜拜大佬：http://blog.csdn.net/c406495762/article/details/59095864
 
@@ -238,7 +239,7 @@ if __name__ == "__main__":
     #使用JSON
     translate_results = json.loads(html)
     #找到翻译结果
-    translate_results = translate_results['translateResult'][0][0]['tgt']
+    #translate_results = translate_results['translateResult'][0][0]['tgt']
     #打印翻译信息
     print("翻译的结果是：%s" % translate_results)
 ```
