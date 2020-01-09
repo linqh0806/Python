@@ -306,6 +306,7 @@ conda upgrade <package_name>
 
 更新多个指定包，则包名以空格隔开，向后排列。如：conda update pandas numpy matplotlib即更新pandas、numpy、matplotlib包。
 
+**使用anaconda时，若发现占用的磁盘空间变得特别大，主要是缓存了很多package和index，运行的时候会产生临时文件，然后有很多包。可以使用conda clean -a 命令进行清理**
 
 # virtualenv的使用--[推荐网站](http://www.cnblogs.com/freely/p/8022923.html)
 
